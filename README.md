@@ -9,7 +9,7 @@ The primary goal of this project is to demonstrate how to implement JPA in a Jav
 <li>Entities mapped to database tables.</li>
 <li>Basic querying using JPQL (Java Persistence Query Language).</li>
 <li>Examples of CRUD (Create, Read, Update, Delete) operations on the database.</li>
-<li>Utilization of MySQL as the database engine</li>
+<li>Utilization of H2 as database</li>
 
 # Proyecto de ejemplo de JPA en Java - Tienda Online
 Este proyecto de ejemplo en Java muestra el uso sencillo de Java Persistence API (JPA) con una base de datos MySQL para emular el funcionamiento de una pequeña tienda online. Utiliza Maven para la gestión de dependencias y configuraciones.
@@ -21,7 +21,7 @@ El objetivo principal de este proyecto es demostrar cómo implementar JPA en una
 <li> Configuración sencilla de JPA con Hibernate. </li>
 <li>Entidades mapeadas a tablas de la base de datos.</li>
 <li>Consultas básicas utilizando JPQL (Java Persistence Query Language).</li>
-<li>Uso de MySQL como motor de base de datos.</li>
+<li>Uso de H2 como base de datos.</li>
 <li>Ejemplos de operaciones CRUD (Crear, Leer, Actualizar y Eliminar) en la base de datos.</li>
 
 
