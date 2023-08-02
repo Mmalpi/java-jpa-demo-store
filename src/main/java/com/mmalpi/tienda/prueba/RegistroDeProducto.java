@@ -3,28 +3,30 @@ package com.mmalpi.tienda.prueba;
 import java.math.BigDecimal;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
+import com.mmalpi.tienda.dao.CategoriaDao;
+import com.mmalpi.tienda.dao.ProductoDao;
+import com.mmalpi.tienda.modelo.Categoria;
 import com.mmalpi.tienda.modelo.Producto;
+import com.mmalpi.tienda.utils.JPAUtils;
 
 public class RegistroDeProducto {
 
 	public static void main(String[] args) {
-
-		Producto productoPrueba = new Producto();
+		Categoria categoriaPrueba = new Categoria("Prueba");
+		Producto productoPrueba = new Producto("nombre", "descripcion", new BigDecimal("1000"), categoriaPrueba);
 		
-		productoPrueba.setNombre("nombre");
-		productoPrueba.setDescripcion("descripcion");
-		productoPrueba.setPrecio(new BigDecimal("1000"));
+		EntityManager em = JPAUtils.getEntityManager();
 		
-		//instance the entity using the name created in the persistence.xml //instancia la entidad usando el nombre declarado en el xml
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("tienda");
-		EntityManager em = factory.createEntityManager();
+		ProductoDao productoDao = new ProductoDao(em);
+		CategoriaDao categoriaDao = new CategoriaDao(em);
 		
 		//begin the transactions
 		em.getTransaction().begin();
-		em.persist(productoPrueba);
+		
+		categoriaDao.guardar(categoriaPrueba);
+		productoDao.guardar(productoPrueba);
+		
 		em.getTransaction().commit();
 		em.close();
 	}
