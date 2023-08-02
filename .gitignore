@@ -1,5 +1,28 @@
-/target/
-.classpath
-.mvn/
-.settings/
-.project
+# Directorios generados por Maven
+target/
+bin/
+out/
+
+# Archivos de configuración generados automáticamente
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Archivos IDE
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Archivos de compilación
+*.class
+*.jar
+
+# Archivos de registro y errores
+*.log
+log/
+
+# Archivos temporales
+*.tmp
