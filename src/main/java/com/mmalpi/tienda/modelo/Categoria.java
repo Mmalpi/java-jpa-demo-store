@@ -25,8 +25,11 @@ public class Categoria{
 	
 	
 	
+	public Categoria() {
+	}
+
+
 	public Categoria(String nombre) {
-		super();
 		this.nombre = nombre;
 	}
 	
@@ -37,10 +40,10 @@ public class Categoria{
 	protected void setId(Long id) {
 		this.id = id;
 	}
-	protected String getNombre() {
+	public String getNombre() {
 		return nombre;
 	}
-	protected void setNombre(String nombre) {
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 	

@@ -32,11 +32,17 @@ public class Producto {
 	@ManyToOne //relation between producto and categoria
 	private Categoria categoria;
 	
+	
+	
+	//constructors
+	
 	public Producto(String nombre, String descripcion, BigDecimal precio, Categoria categoria) {
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.precio = precio;
 		this.categoria = categoria;
+	}
+	public Producto() {
 	}
 	//getters and setters
 	public Long getId() {

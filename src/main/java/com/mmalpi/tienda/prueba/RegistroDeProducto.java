@@ -27,7 +27,15 @@ public class RegistroDeProducto {
 		categoriaDao.guardar(categoriaPrueba);
 		productoDao.guardar(productoPrueba);
 		
-		em.getTransaction().commit();
+		em.flush();
+		//Add description
+		em.clear();
+		
+		categoriaPrueba.setNombre("Prueba 2");
+		categoriaDao.actualizar(categoriaPrueba);
+		
+		
+		em.getTransaction().commit(); //.flush() allows a rollback in the DB
 		em.close();
 	}
 
